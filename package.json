@@ -14,9 +14,9 @@
     "pnpm": "12.3.4"
   },
   "scripts": {
-    "dev": "dotenv next dev --turbo",
+    "dev": "dotenv next dev --turbo -p 4000",
     "build": "npm-run-all check:env build:db check:db build:tracker build:recorder build:geo build:openapi build:packages build:app",
-    "start": "next start",
+    "start": "next start -p 4000",
     "build:docker": "npm-run-all build:db build:tracker build:recorder build:geo build:openapi build:packages build:app",
     "start:docker": "npm-run-all check:db update:tracker start:server",
     "start:env": "node scripts/start-env.js",
